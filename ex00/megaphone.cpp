@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 11:33:23 by lvarela           #+#    #+#             */
-/*   Updated: 2022/03/14 16:18:38 by lvarela          ###   ########.fr       */
+/*   Updated: 2022/03/14 16:41:44 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int	main(int argc, char **argv)
 		else
 			cout << endl;
 	}
+	return 0;
 }
 
 string	stringUpper(string str)
