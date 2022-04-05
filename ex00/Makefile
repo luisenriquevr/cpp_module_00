@@ -6,31 +6,29 @@
 #    By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/14 12:22:26 by lvarela           #+#    #+#              #
-#    Updated: 2022/03/14 16:24:12 by lvarela          ###   ########.fr        #
+#    Updated: 2022/03/24 14:08:13 by lvarela          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SOURCES	:=	$(wildcard *.cpp)
-OBJECTS :=	$(subst .cpp,.o,$(SOURCES))
+SRCS	:=	main.cpp
+OBJS	:=	$(SRCS:.cpp=.o)
 CC		:=	clang++
 FLAGS	:=	-Wall -Werror -Wextra
+RM		:=	rm -f
 NAME	:=	megaphone
 
 all		:	$(NAME)
 
-$(NAME) :	$(OBJECTS)
-			$(CC) $(FLAGS) $(OBJECTS) -o $(NAME)
-
-$(%.o)	:	$(%.c)
-			$(CC) -c $^ -o $@
+$(NAME) :	$(OBJS)
+			$(CC) $(FLAGS) -o $(NAME) $(OBJS)
 
 clean	:
-			rm $(OBJECTS)
+			$(RM) $(OBJS)
 
 fclean	:	clean
-			rm $(NAME)
+			$(RM) $(NAME)
 
-re		:	fclean all
+re		:	fclean $(NAME)
 
-.PHONY	:	all $(NAME) clean fclean re
+.PHONY	:	all clean fclean re
 
