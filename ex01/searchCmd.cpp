@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 15:57:19 by lvarela           #+#    #+#             */
-/*   Updated: 2022/04/06 16:05:11 by lvarela          ###   ########.fr       */
+/*   Updated: 2022/04/06 16:22:19 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static void			searchContact(Contact phoneBook[], int nContacts)
 	else
 	{
 		std::cin.clear();
-		std::cout << "No contact with this index was found. :(" << std::endl;
+		std::cout << "NOTE: No contact with this index was found. :(" << std::endl;
 	}
 }
 

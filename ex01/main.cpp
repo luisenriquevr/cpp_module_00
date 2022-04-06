@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 16:41:13 by lvarela           #+#    #+#             */
-/*   Updated: 2022/04/06 16:19:04 by lvarela          ###   ########.fr       */
+/*   Updated: 2022/04/06 16:23:29 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int main()
 				if (pos == MAX_CONTACTS)
 					pos = 0;
 				phoneBook[pos++] = addContact();
-				std::cout << "The oldest contact was deleted" << std::endl;
+				std::cout << "NOTE: The oldest contact was deleted." << std::endl;
 			}
 		}
 		else if (cmd == "SEARCH")
@@ -64,8 +64,10 @@ int main()
 			if (nContacts)
 				printPhoneBook(phoneBook, nContacts);
 			else
-				std::cout << "PhoneBook is empty." << std::endl;
+				std::cout << "NOTE: PhoneBook is empty." << std::endl;
 		}
+		else
+			std::cout << "NOTE: Comand not found" << std::endl;
 	}
 	return 0;
 }
