@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 16:41:13 by lvarela           #+#    #+#             */
-/*   Updated: 2022/04/06 16:23:29 by lvarela          ###   ########.fr       */
+/*   Updated: 2022/04/06 16:26:03 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int main()
 				std::cout << "NOTE: PhoneBook is empty." << std::endl;
 		}
 		else
-			std::cout << "NOTE: Comand not found" << std::endl;
+			std::cout << "NOTE: Comand not found." << std::endl;
 	}
 	return 0;
 }
