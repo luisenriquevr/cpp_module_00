@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 15:21:35 by lvarela           #+#    #+#             */
-/*   Updated: 2022/04/04 11:35:07 by lvarela          ###   ########.fr       */
+/*   Updated: 2022/04/06 15:12:16 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,68 +15,41 @@
 Contact::Contact(void) { return ; }
 Contact::~Contact(void) { return ; }
 
-/*
-void		Contact::printContact(Contact)
+void		Contact::setVariable(std::string str, std::string variable)
+{
+	if (variable.compare("firstName") == 0)
+		this->firstName = str;
+	if (variable.compare("lastName") == 0)
+		this->lastName = str;
+	if (variable.compare("nickName") == 0)
+		this->nickName = str;
+	if (variable.compare("phoneNumber") == 0)
+		this->phoneNumber = str;
+	if (variable.compare("darkestSecret") == 0)
+		this->darkestSecret = str;
+	return ;
+}
+
+std::string	Contact::getVariable(std::string variable)
+{
+	if (variable.compare("firstName") == 0)
+		return (this->firstName);
+	if (variable.compare("lastName") == 0)
+		return (this->lastName);
+	if (variable.compare("nickName") == 0)
+		return (this->nickName);
+	if (variable.compare("phoneNumber") == 0)
+		return (this->phoneNumber);
+	if (variable.compare("darkestSecret") == 0)
+		return (this->darkestSecret);
+	return (NULL);
+}
+
+void		Contact::printContact(void)
 {
 	std::cout << this->firstName << std::endl;
 	std::cout << this->lastName << std::endl;
 	std::cout << this->nickName << std::endl;
 	std::cout << this->phoneNumber << std::endl;
 	std::cout << this->darkestSecret << std::endl;
-}
-*/
-
-void		Contact::saveFirstName(std::string str)
-{
-	this->firstName = str;
-	return ;
-}
-
-void		Contact::saveLastName(std::string str)
-{
-	this->lastName = str;
-	return ;
-}
-
-void		Contact::saveNickName(std::string str)
-{
-	this->nickName = str;
-	return ;
-}
-
-void		Contact::savePhoneNumber(std::string str)
-{
-	this->phoneNumber = str;
-	return ;
-}
-
-void		Contact::saveDarkestSecret(std::string str)
-{
-	this->darkestSecret = str;
-	return ;
-}
-
-std::string Contact::getFirstName(void)
-{
-	return (this->firstName);
-}
-
-std::string Contact::getLastName(void)
-{
-	return (this->lastName);
-}
-
-std::string Contact::getNickName(void)
-{
-	return (this->nickName);
-}
-
-std::string Contact::getPhoneNumber(void)
-{
-	return (this->phoneNumber);
-}
-
-std::string Contact::getDarkestSecret(void)
-{
-	return (this->darkestSecret);
 }

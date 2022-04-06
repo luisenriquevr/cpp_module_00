@@ -6,11 +6,11 @@
 #    By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/14 16:26:59 by lvarela           #+#    #+#              #
-#    Updated: 2022/03/31 16:45:21 by lvarela          ###   ########.fr        #
+#    Updated: 2022/04/06 15:08:42 by lvarela          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	:=	main.cpp contact.cpp phoneBook.cpp
+SRCS	:=	main.cpp contact.cpp searchCmd.cpp addCmd.cpp
 OBJS	:=	$(SRCS:.cpp=.o)
 CC		:=	clang++
 FLAGS	:=	-Wall -Werror -Wextra
