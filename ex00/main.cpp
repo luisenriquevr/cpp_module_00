@@ -1,39 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 11:33:23 by lvarela           #+#    #+#             */
-/*   Updated: 2022/03/14 16:41:44 by lvarela          ###   ########.fr       */
+/*   Updated: 2022/04/06 16:31:27 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-using std::string;
-using std::cout;
-using std::endl;
-
-string stringUpper(string str);
+std::string stringUpper(std::string str);
 
 int	main(int argc, char **argv)
 {
 	if (argc == 1)
-		cout << "* LOUD ANF UNBEARABLE FEEDBACK NOISE *" << endl;
+		std::cout << "* LOUD ANF UNBEARABLE FEEDBACK NOISE *" << std::endl;
 	for (int i = 1; i < argc; i++)
 	{
-		cout << stringUpper(argv[i]);
+		std::cout << stringUpper(argv[i]);
 		if (argv[i + 1])
-			cout << ' ';
+			std::cout << ' ';
 		else
-			cout << endl;
+			std::cout << std::endl;
 	}
 	return 0;
 }
 
-string	stringUpper(string str)
+std::string	stringUpper(std::string str)
 {
 	for (int i = 0; i < str.length(); i++)
 		str[i] = toupper(str[i]);
