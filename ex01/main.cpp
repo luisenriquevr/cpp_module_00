@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 16:41:13 by lvarela           #+#    #+#             */
-/*   Updated: 2022/04/06 16:26:03 by lvarela          ###   ########.fr       */
+/*   Updated: 2022/05/11 18:50:19 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ int main()
 	while (1)
 	{
 		getline(std::cin, cmd, '\n');
+		if (std::cin.fail())
+			exit(1);
 		if (cmd == "EXIT")
 			break ;
 		else if (cmd == "ADD")
