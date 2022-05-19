@@ -1,3 +1,3 @@
-# cpp_module_00
+# C++ - Module 00
 
-For the C++ modules you will use and learn C++98 only. The goal is for you to learn the basic of an object oriented programming language. We know modern C++ is way different in a lot of aspects so if you want to become a proficient C++, developer you will need modern standard C++ later on.
+Namespace, class, member functions, stdio stream, initialization lists, static, const, and lots of basic stuff
