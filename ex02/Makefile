@@ -6,12 +6,12 @@
 #    By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/07 14:52:05 by lvarela           #+#    #+#              #
-#    Updated: 2022/05/19 14:22:00 by lvarela          ###   ########.fr        #
+#    Updated: 2022/06/01 10:38:41 by lvarela          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	:=	Account.cpp tests.cpp
-OBJS	:=	$(SRCS:.cpp=.o)
+SRCS	:=	$(wildcard *.cpp)
+OBJS	:=	$(SRCS:%.cpp=%.o)
 CC		:=	c++
 CPPSTD	:=	-std=c++98
 FLAGS	:=	-Wall -Werror -Wextra
@@ -21,7 +21,10 @@ NAME	:=	Account
 all		:	$(NAME)
 
 $(NAME) :	$(OBJS)
-			$(CC) $(CPPSTD) $(FLAGS) -o $(NAME) $(OBJS)
+			$(CC) $(FLAGS) $(CPPSTD) $(OBJS) -o $(NAME)
+
+$(%.o)	:	$(%.c)
+			$(CC) -c $^ -o $@
 
 clean	:
 			$(RM) $(OBJS)
@@ -29,6 +32,7 @@ clean	:
 fclean	:	clean
 			$(RM) $(NAME)
 
-re		:	fclean $(NAME)
+re		:	fclean all
 
-.PHONY	:	all clean fclean re
+.PHONY	:	all $(NAME) clean fclean re
+
