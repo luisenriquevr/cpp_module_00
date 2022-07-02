@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 16:41:13 by lvarela           #+#    #+#             */
-/*   Updated: 2022/05/11 18:50:19 by lvarela          ###   ########.fr       */
+/*   Updated: 2022/07/02 18:39:29 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,30 +39,25 @@ int main()
 	nContacts = 0;
 	pos = 0;
 	initPrint();
-	while (1)
-	{
+	while (1) {
 		getline(std::cin, cmd, '\n');
 		if (std::cin.fail())
 			exit(1);
 		if (cmd == "EXIT")
 			break ;
-		else if (cmd == "ADD")
-		{
-			if (nContacts < MAX_CONTACTS)
-			{
+		else if (cmd == "ADD") {
+			if (nContacts < MAX_CONTACTS) {
 				phoneBook[pos++] = addContact();
 				nContacts++;
 			}
-			else
-			{
+			else {
 				if (pos == MAX_CONTACTS)
 					pos = 0;
 				phoneBook[pos++] = addContact();
 				std::cout << "NOTE: The oldest contact was deleted." << std::endl;
 			}
 		}
-		else if (cmd == "SEARCH")
-		{
+		else if (cmd == "SEARCH") {
 			if (nContacts)
 				printPhoneBook(phoneBook, nContacts);
 			else

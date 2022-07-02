@@ -6,14 +6,13 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 14:54:24 by lvarela           #+#    #+#             */
-/*   Updated: 2022/04/06 15:55:14 by lvarela          ###   ########.fr       */
+/*   Updated: 2022/07/02 18:39:39 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "contact.hpp"
 
-Contact				addContact(void)
-{
+Contact				addContact(void) {
 	Contact			newContact;
 	std::string		buffer;
 

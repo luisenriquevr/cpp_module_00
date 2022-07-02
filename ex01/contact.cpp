@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 15:21:35 by lvarela           #+#    #+#             */
-/*   Updated: 2022/04/06 15:12:16 by lvarela          ###   ########.fr       */
+/*   Updated: 2022/07/02 18:39:55 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 Contact::Contact(void) { return ; }
 Contact::~Contact(void) { return ; }
 
-void		Contact::setVariable(std::string str, std::string variable)
-{
+void		Contact::setVariable(std::string str, std::string variable) {
 	if (variable.compare("firstName") == 0)
 		this->firstName = str;
 	if (variable.compare("lastName") == 0)
@@ -30,8 +29,7 @@ void		Contact::setVariable(std::string str, std::string variable)
 	return ;
 }
 
-std::string	Contact::getVariable(std::string variable)
-{
+std::string	Contact::getVariable(std::string variable) {
 	if (variable.compare("firstName") == 0)
 		return (this->firstName);
 	if (variable.compare("lastName") == 0)
@@ -45,8 +43,7 @@ std::string	Contact::getVariable(std::string variable)
 	return (NULL);
 }
 
-void		Contact::printContact(void)
-{
+void		Contact::printContact(void) {
 	std::cout << this->firstName << std::endl;
 	std::cout << this->lastName << std::endl;
 	std::cout << this->nickName << std::endl;

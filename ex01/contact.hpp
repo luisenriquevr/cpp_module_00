@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 14:37:21 by lvarela           #+#    #+#             */
-/*   Updated: 2022/04/06 16:15:06 by lvarela          ###   ########.fr       */
+/*   Updated: 2022/07/02 18:40:00 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@
 const int MAX_CONTACTS = 3;
 const int COLUMN_WITH = 10;
 
-class	Contact
-{
+class	Contact {
 	private:
 		std::string		firstName;
 		std::string		lastName;
