@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 16:41:13 by lvarela           #+#    #+#             */
-/*   Updated: 2022/07/02 18:51:34 by lvarela          ###   ########.fr       */
+/*   Updated: 2022/07/02 19:09:05 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@
 // EXIT para salir de la agenda
 // No puede haber mas de 8 contactos, se irán borrando los mas antiguos
 
-static void		initPrint()
-{
+static void		initPrint() {
 	std::cout << "---------------------------------------------" << std::endl;
 	std::cout << "      ~~~~~~~~~~~ phoneBook ~~~~~~~~~~~~     " << std::endl;
 	std::cout << "---------------------------------------------" << std::endl;
@@ -29,8 +28,7 @@ static void		initPrint()
 
 
 
-int main()
-{
+int main() {
 	int				nContacts;
 	int				pos;
 	Contact			phoneBook[MAX_CONTACTS];
