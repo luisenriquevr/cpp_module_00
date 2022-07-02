@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 16:41:13 by lvarela           #+#    #+#             */
-/*   Updated: 2022/07/02 18:39:29 by lvarela          ###   ########.fr       */
+/*   Updated: 2022/07/02 18:51:34 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@
 
 static void		initPrint()
 {
-	std::cout << "------------------------------------------" << std::endl;
-	std::cout << "    ~~~~~~~~~~~ phoneBook ~~~~~~~~~~~~    " << std::endl;
-	std::cout << "------------------------------------------" << std::endl;
-	std::cout << "       Use ADD, SEARCH & EXIT comands     " << std::endl;
-	std::cout << "    Note: You can save only 8 contacts    " << std::endl;
-	std::cout << "------------------------------------------" << std::endl;
+	std::cout << "---------------------------------------------" << std::endl;
+	std::cout << "      ~~~~~~~~~~~ phoneBook ~~~~~~~~~~~~     " << std::endl;
+	std::cout << "---------------------------------------------" << std::endl;
+	std::cout << "        Use ADD, SEARCH & EXIT comands       " << std::endl;
+	std::cout << "      Note: You can save only 8 contacts     " << std::endl;
+	std::cout << "---------------------------------------------" << std::endl;
 }
 
 
@@ -38,8 +38,8 @@ int main()
 	
 	nContacts = 0;
 	pos = 0;
-	initPrint();
 	while (1) {
+		initPrint();
 		getline(std::cin, cmd, '\n');
 		if (std::cin.fail())
 			exit(1);
