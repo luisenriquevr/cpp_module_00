@@ -6,7 +6,7 @@
 #    By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/14 12:22:26 by lvarela           #+#    #+#              #
-#    Updated: 2022/07/02 18:47:44 by lvarela          ###   ########.fr        #
+#    Updated: 2022/07/04 18:00:22 by lvarela          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,10 +21,10 @@ NAME	:=	megaphone
 all		:	$(NAME)
 
 $(NAME) :	$(OBJS)
-			$(CC) $(FLAGS) $(CPPSTD) $(OBJS) -o $(NAME)
+			$(CC) $(FLAGS) $(OBJS) -o $(NAME) $(CPPSTD) 
 
 $(%.o)	:	$(%.c)
-			$(CC) -c $^ -o $@
+			$(CC) -c $< -o $@
 
 clean	:
 			$(RM) $(OBJS)
@@ -34,4 +34,4 @@ fclean	:	clean
 
 re		:	fclean all
 
-.PHONY	:	all $(NAME) clean fclean re
+.PHONY	:	all clean fclean re

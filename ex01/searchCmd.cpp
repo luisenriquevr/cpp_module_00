@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 15:57:19 by lvarela           #+#    #+#             */
-/*   Updated: 2022/07/02 18:40:16 by lvarela          ###   ########.fr       */
+/*   Updated: 2022/07/04 18:13:03 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void				printPhoneBook(Contact phoneBook[], int nContacts) {
 		fName = phoneBook[i].getVariable("firstName");
 		lName = phoneBook[i].getVariable("lastName");
 		nName = phoneBook[i].getVariable("nickName");
-		
+
 		std::cout << "|" << std::setw(COLUMN_WITH) << i;
 		if (fName.length() > COLUMN_WITH)
 			fName = widthAdjust(fName);
