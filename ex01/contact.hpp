@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 14:37:21 by lvarela           #+#    #+#             */
-/*   Updated: 2022/07/02 18:40:00 by lvarela          ###   ########.fr       */
+/*   Updated: 2022/07/11 09:56:48 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <iomanip>
 # include <string>
 
-const int MAX_CONTACTS = 3;
+const int MAX_CONTACTS = 8;
 const int COLUMN_WITH = 10;
 
 class	Contact {

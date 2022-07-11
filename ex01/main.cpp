@@ -6,16 +6,11 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 16:41:13 by lvarela           #+#    #+#             */
-/*   Updated: 2022/07/02 19:09:05 by lvarela          ###   ########.fr       */
+/*   Updated: 2022/07/11 09:57:49 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "contact.hpp"
-
-// ADD para añadir contacto
-// SEARCH para buscar contacto
-// EXIT para salir de la agenda
-// No puede haber mas de 8 contactos, se irán borrando los mas antiguos
 
 static void		initPrint() {
 	std::cout << "---------------------------------------------" << std::endl;
@@ -26,8 +21,6 @@ static void		initPrint() {
 	std::cout << "---------------------------------------------" << std::endl;
 }
 
-
-
 int main() {
 	int				nContacts;
 	int				pos;
@@ -36,8 +29,8 @@ int main() {
 	
 	nContacts = 0;
 	pos = 0;
+	initPrint();
 	while (1) {
-		initPrint();
 		getline(std::cin, cmd, '\n');
 		if (std::cin.fail())
 			exit(1);

@@ -6,7 +6,7 @@
 /*   By: lvarela <lvarela@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 13:42:07 by lvarela           #+#    #+#             */
-/*   Updated: 2022/07/02 18:41:33 by lvarela          ###   ########.fr       */
+/*   Updated: 2022/07/11 10:03:48 by lvarela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	Account::_displayTimestamp(void) {
 Account::Account(int initial_deposit) {
 	this->_accountIndex = _nbAccounts++;
 	this->_amount = initial_deposit;
-	_totalAmount *= initial_deposit;
+	_totalAmount += initial_deposit;
 	this->_nbDeposits = 0;
 	this-> _nbWithdrawals = 0;
 
